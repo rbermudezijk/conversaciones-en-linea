@@ -1,0 +1,27 @@
+acciones del usuario
+acciones del sistema
+acciones del metasistema
+
+elementos de la interfaz gráfica de usuario
+
+estructuras de datos de sistema
+estructuras de datos del metasistema
+
+ei = Elementos de la Interfaz
+ci = Control de la Interfaz
+
+componente
+   metodo para dibujar
+   metodo de carga
+   
+componentes dinámicos
+componentes de única carga
+componentes con referencia externa
+componentes sin referencia externa
+
+
+mostrar -> verbo para carga dinámica de HTML
+dibujar -> verbo para carga inicial de HTML desde javascript
+
+RAAL470619
+María de la Luz Rasgado Alonso

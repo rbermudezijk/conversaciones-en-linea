@@ -1,0 +1,45 @@
+<!-- BARRA DE NAVEGACIÓN. -->
+<nav class="nav-bar">
+	<a class="pantalla">
+	  <div class="icono i-usuario"></div>
+	  <div class="i-texto" id="usuario-principal"></div>
+	</a>
+	<a class="nav-button pantalla" id="btn-exit">
+	  <div class="icono i-cerrar"></div>
+	  <div class="i-texto">Salir</div>
+	</a>
+	<a class="mobil" id="btn-menu"><div class="icono i-menu"></div></a>
+</nav>
+
+<div class="sala">
+	<nav class="barra-m mobil">
+		<a id="info-usuario">
+		  <div class="icono i-usuario"></div>
+		  <div class="i-texto" id="usuario-principal-m"></div>
+		</a>
+		<a id="btn-exit-m">
+		  <div class="icono i-cerrar"></div>
+		  <div class="i-texto">Salir</div>
+		</a>
+	</nav>
+	<!-- PANEL DE USUARIOS. -->
+	<div class="panel-izq shadow">
+		<div class="titulo tag">
+		  <div class="icono" id="i-grupo"></div>
+		  <div class="t-icono">Usuarios conectados</div>
+		</div>
+		<div class="contenedor-usuarios" id="pila-usuarios"></div>
+	</div>
+	
+	<!-- PANEL DE CONVERSACIONES. -->
+	<div class="panel-der">
+	    <div class="titulo tag">
+		  <div class="icono" id="i-chat"></div>
+		  <div class="t-icono"></div>
+		  <div class="icono i-cerrar" id="cerrar-conversacion"></div>
+		</div>
+		<div class="contenedor-conversacion" id="pila-mensajes"></div>
+		<textarea id="escribe-mensaje" placeholder="Escribe tu mensaje ..."></textarea>
+		<button class="icono" id="btn-enviar"></button>
+	</div>
+</div>

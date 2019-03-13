@@ -1,0 +1,67 @@
+.panel-izq {
+	width:   310px;
+	z-index: 2;
+	height:  calc(100% - 57px); /** 57 pixeles de la barra de navegación. */
+}
+.contenedor-usuarios {
+	height: calc(100% - 54px); /**54 pixeles: del titulo*/
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	background: #FFFFFA;
+}
+#i-grupo {
+	float:  left;
+	margin: 3px 10px 0 0;
+	height: 26px;
+	width:  26px;
+	background-image:  url("recursos/grupo.png");
+}
+.usuario-grupo {
+	cursor: pointer;
+	padding: 14px 8px;
+	font-family: "Times New Roman", Times, Sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	margin: 0;
+	border-bottom: 0.1px solid #dcdcdc;
+	color:  #aaa;
+}
+.usuario-grupo:hover {
+	background-color: #F4F4F4;
+}
+.usuario-grupo.conectado {
+	color: #2c3e50;
+}
+.usuario-grupo.select{
+	background-color: rgba(176, 224, 230, 0.5);
+}
+.viñeta {
+	margin: 5px;
+	width:  10px;
+	height: 10px;
+	float:  left;
+	background-repeat: no-repeat;
+	background-size:   contain;
+	background-image: url("recursos/desconectado.png");
+}
+.conectado  .viñeta {
+	background-image: url("recursos/conectado.png");
+}
+sup.notificacion{
+	padding: 3px 8px;
+	margin:  3px 10px;
+	background-color: #FF6347;
+	color:   white;
+	border-radius:50px;
+	font-size:  14px;
+	box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+	user-select: none;
+	cursor: default;
+	font-weight: normal;
+}
+@media screen and (max-width: 480px)
+{
+	.panel-izq {
+		width:   100%;
+	}
+}

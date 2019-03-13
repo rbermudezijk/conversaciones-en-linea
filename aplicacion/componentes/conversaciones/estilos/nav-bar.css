@@ -1,0 +1,68 @@
+.barra-m {
+	z-index:    4;
+	height:     100%; /** 57 pixeles de la barra de navegación. */
+	width:      0;
+	transition: all 0.5s;
+	background: #333;
+	overflow:   hidden;
+}
+.barra-m.visible{
+	width: calc(100% - 57px);
+}
+.barra-m a:first-child{
+	border-top: solid 1px grey;
+}
+.barra-m a{
+	width: 480px;
+	border-bottom: solid 1px grey;
+}
+#info-usuario {
+	margin-left: 5px;
+}
+#btn-exit-m{
+    cursor: pointer;
+}
+#btn-exit-m> div:first-child{
+	margin-left: 5px;
+}
+/** Diseño de la barra de navegacion. */
+.nav-bar {
+	width:      100%;
+	height:     57px;
+	position:   fixed;
+	z-index:    4;
+	background: #333;
+	overflow:   hidden;
+    box-shadow: 0 4px  8px 0 rgba(0, 0, 0, 0.25),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.nav-bar a, .barra-m a{
+	float:       left;
+	padding:     18px;
+	color:       white;
+	font-weight: bold;
+	font-size:   18px;
+}
+.nav-bar a > *, .barra-m a > * {
+	float: left;
+}
+.i-texto {
+	margin: 0px 10px;
+}
+.nav-button:hover {
+	background:  #4e4f61;
+	user-select: none;
+	cursor:      pointer;
+}
+#btn-exit, #btn-menu {
+	float: right;
+}
+.i-usuario{ background-image:  url("recursos/usuario.png"); }
+.i-cerrar { background-image:  url("recursos/cerrar.png"); }
+.i-menu { background-image:    url("recursos/menu.svg"); }
+
+@media screen and (min-width: 481px) {
+	#btn-exit-m:hover{
+        background:  #4e4f61;
+	}
+}

@@ -1,0 +1,18 @@
+@import "componentes/acceso/estilos.acceso.css";
+@import "componentes/conversaciones/estilos.conversaciones.css";
+
+*{
+	font-family: "Segoe UI",Arial,sans-serif;
+}
+body, h3{
+	margin:0;
+	padding:0;
+}
+.tag {
+	color:       white;
+	background:  #4DC5BC;
+}
+.titulo{
+	font-size:     23px;
+	padding:       10px 10px 15px;
+}

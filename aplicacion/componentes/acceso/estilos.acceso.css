@@ -1,0 +1,102 @@
+.form {
+	float:      left;
+	position:   relative;
+    background: white;
+    text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+	            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form.f-350 { width: 350px; }
+.form.f-700 { width: 700px; }
+.form.f-500 { width: 500px; }
+.form.f-left {
+	left: 10.0%;
+	top:  50px;
+}
+.form.f-center {
+	left: 36%;
+	top:  160px;
+}
+.form .f-header {
+	margin-bottom: 20px;
+	user-select:   none;
+}
+.form .f-element {
+	width:     95%;
+	height:    50px;
+	margin:    25px 0;
+	padding:   10px 0;
+	font-size: 20px;
+	border:    none;
+}
+.form .f-input {
+	width: 86%;
+	padding-left:  10px;
+	padding-right: 10px;
+	border-bottom: 2px solid rgb(50,212,175);
+}
+.form button.f-element {
+	cursor: pointer;
+	margin-bottom: 10px;
+	user-select: none;	
+}
+.form button.f-element:hover { opacity: 0.7; }
+.form .f-undisplay {
+	background:    #FFA07A;
+	width:         93%;
+	height:        0;
+	max-height:    0;
+	margin-left:   10px;
+	margin-bottom: 5px;
+	overflow:      hidden;
+	border-radius: 4px;
+	font-size:     19px;
+	transition:    all 0.7s ease-out;
+}
+.form .f-error {
+	transition:    all 0.7s ease-out;
+	height:        auto;
+	max-height:    500px;
+	padding:       14px 0;
+	color:         #8B0000;
+	border:        2px solid #FF6347;
+}
+.form .f-footer {
+	float:         left;
+	margin-bottom: 15px;
+	margin-left:   12px;
+	font-size:     18px;
+	color:         grey;
+}
+.form .f-footer a{
+	color: grey;
+    user-select: none;
+}
+.form .f-footer a:hover { font-weight: bold; }
+.form .f-footer a:after { color: grey; }
+#btn-registro{
+	cursor: pointer;
+}
+@media screen and (max-width: 900px){
+	.form.f-center {
+        left: 15%;
+    }
+}
+@media screen and (max-width: 480px) {
+	.form { 
+	   margin-bottom: 50px; 
+	}
+	.form.f-center {
+		width:    90%;
+		position: relative;
+		left:     5%;
+		top:      10px;
+	}
+	.form .f-element {
+		margin:  15px 0 15px 0;
+		padding: 10px 5px 10px 5px;
+	}
+	.form .f-undisplay {
+		margin-left:   10px;
+	}
+}

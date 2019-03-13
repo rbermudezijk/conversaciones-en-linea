@@ -1,0 +1,6 @@
+no mandar mensajes si solo hay espacios en blanco o vacío
+corregir actualización de mensajes en tiempo real 
+corregir estilos de los títulos
+agregar notificaciones
+
+*Mejorar la arquitectura de la aplicación

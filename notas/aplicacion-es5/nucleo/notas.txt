@@ -1,0 +1,17 @@
+Objetivos
+  - Escribir código de aplicaciónes en Español.
+  - Ofrecer una biblioteca de funciones que permita sistituir el uso de palabras
+    reservadas en ingles por palabras en Español.
+  - Diseñar un estandar de documentación en español.
+  - Diseñar un estandar de sintaxis de escritura de código.
+  - Escribir aplicaciones de bajo coste computacional.
+  
+  
+
+Etiquetas para Documentación 
+@Archivo
+
+
+
+Clases y Métodos
+@Constructor

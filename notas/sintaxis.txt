@@ -1,0 +1,35 @@
+Si(condición)
+  .Entonces()
+  .Sino()
+  .Sino()
+  
+para({cada:'proveedor', en: Proveedores})
+  .hacer()
+  
+ParaCadaElementoEn(arreglo)
+  .hacer()
+  .filtrar()
+  .limpiar()
+  
+Mientras(condición)
+  .hacer()
+  
+ExtraerDe(objeto)
+  .lasLlaves()
+  
+PConcurrente({})
+  .Correcto(()=>{})
+  .Error(()=>{})
+  .Finalizar(()=>{});
+  
+var {mod1, mod2, mod3} = importar('com.data.entrena');
+
+
+
+
+
+
+
+
+
+

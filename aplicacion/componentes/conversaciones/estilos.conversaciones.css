@@ -1,0 +1,56 @@
+/*
+ * El diseño general se hizo utilizando el modelo de bloques, 
+ * y estableciendo posiciones absolutas en la pantalla.
+ */
+@import "estilos/nav-bar.css";
+@import "estilos/panel-usuarios.css";
+@import "estilos/panel-conversaciones.css";
+
+/** Definicion de iconos. */
+.icono{
+	margin:  4px 0;
+	padding: 0;
+	width:   20px;
+	height:  20px;
+	background-repeat: no-repeat;
+	background-size:   contain;
+}
+.shadow {
+	box-shadow: 0px 0px  5px 1px rgba(0, 0, 0, 0.4),
+				3px 0px 10px 1px rgba(0, 0, 0, 0.19);
+}
+.sala > * {
+   position: fixed;
+   top:      57px;
+}
+.t-icono{
+	height: 32px;
+	width: fit-content;
+	width: -moz-fit-content;
+	margin-bottom: 5px;
+	overflow: hidden;
+	animation-name: mostrar-t;
+	animation-duration: 0.4s;
+	animation-timing-function: ease;
+}
+@keyframes mostrar-t{
+	0%{
+		width: 0%;
+		opacity: 0;
+	}
+	100%{
+		width: 70%;
+		opacity: 1;
+	}
+}
+.mobil{
+	display: none;
+}
+@media screen and (max-width: 480px){
+	.mobil{
+		display: block;
+	}
+	.pantalla{
+		display: none;
+	}
+}

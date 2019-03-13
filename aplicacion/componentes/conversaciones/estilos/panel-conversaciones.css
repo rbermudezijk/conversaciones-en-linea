@@ -1,0 +1,148 @@
+.panel-der {
+	background: white;
+	left:    310px;
+	width:   calc(100% - 310px);/*calc(100% - 310px); *//** 310 pixeles de la medida del panel izquirdo o de usuarios. */
+	height:  0;
+	z-index: 1;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.45s;
+}
+
+.panel-der.mostrar{
+	height:   calc(100% - 57px); /** 57 pixeles de la barra de navegación. */
+	opacity:  1;
+}
+
+.panel-der .titulo { 
+	padding-left: 7px;
+	text-align:   left;
+}
+@media screen and (max-width: 550px) {
+	#i-chat {
+		display: none;
+	}
+}
+@media screen and (max-width: 330px) {
+	.panel-der .t-icono { 
+		width: 250;
+		overflow: hidden;
+	}
+}
+.contenedor-conversacion{
+	background-color: #FBFBFB;
+	box-shadow: 3px 3px  2px 0px rgba(0, 0, 0, 0.4),
+				3px 3px  4px 0px rgba(0, 0, 0, 0.19);
+	height: calc(100% - 180px); /**54 pixeles: título, 45: input de entrada de mensajes, 31 pixeles de desface.*/
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch; /*https://developer.mozilla.org/es/docs/Web/CSS/-webkit-overflow-scrolling*/
+	padding: 15px 30px; /**Margen general de 60 pixeles para los mensajes. */
+	margin-bottom: 10px;
+}
+#escribe-mensaje {
+	float: left;
+	width:  calc(99% - 105px);
+	height: 85px;
+	padding-left: 15px;
+	padding-top:  10px;
+	margin-left:  10px;
+	margin-right:  5px;
+	border: none;
+	resize: none;
+	font-size: 17px;
+	font-family: "Times New Roman", Times, serif;
+}
+/** DEFINICION DE ICONOS DEL PANEL. */
+#i-chat {
+	float:  left;
+	margin: 5px 15px;
+	height: 30px;
+	width:  30px;
+	background-image:  url("recursos/chat.png"); 
+}
+
+/** DISEÑO DE MENSAJES. */
+
+/** Define las filas de mensajes. */
+.mensaje{
+	float: left;
+	width: 100%;
+	margin: 10px 0;
+}
+.mensaje.nuevo{
+	animation: mostrar 0.5s;
+	-webkit-animation: mostrar 0.5s;
+}
+@keyframes mostrar{
+	0%{
+		height: 0;
+		opacity: 0; 
+	}
+	100%{
+		height: content;
+		opacity: 1;
+	}
+}
+.enviado, .recibido {
+	box-shadow: 0px 0px 0.5px 1px rgba(0, 0, 0, 0.6);
+	width: fit-content;
+	width: -moz-fit-content;
+	max-width: calc(90% - 30px); /**60 pixeles de margen para los mensajes mostrados. */
+	padding:   21px;
+	border-radius: 6px;
+	font-size: 17px;
+	word-wrap: break-word;
+	color: #333;
+}
+.enviado {
+	background: #FFF;
+}
+.recibido {
+	float: right;
+	background: rgba(176, 224, 230, 0.5);
+}
+#cerrar-conversacion{
+	float: right;
+	margin: 7px 10px;
+}
+.d-c-ifrar{
+	padding: 8px 8px;
+	margin:  0 15px 15px 0;
+	background-repeat: no-repeat;
+	background-size:   contain;
+	cursor: pointer;
+	opacity: 0.6;
+	background-image:  url("recursos/c-abierto.png");
+}
+.d-c-ifrar.cifrado {
+	background-image:  url("recursos/c-cerrado.png");
+}
+#btn-enviar{
+	float: left;
+	height: 90px;
+	width:  90px;
+	border: none;
+	margin-top: -6px;
+	background-color: white;
+	background-image: url("recursos/email.png");
+}
+
+@media screen and (max-width: 480px) {
+	.panel-der{
+		z-index: 3;
+		left: 0;
+		width: 100%;
+	}
+	#btn-enviar{
+		margin-top: -5px;
+		height: 55px;
+		width:  55px;
+	}
+	#escribe-mensaje {
+		height: 45px;
+		width: calc(99% - 70px);
+	}
+	.contenedor-conversacion{
+		height: calc(100% - 145px);
+	}
+}
