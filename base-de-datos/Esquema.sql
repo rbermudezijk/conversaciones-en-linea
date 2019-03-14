@@ -1,6 +1,6 @@
 SET character_set_server = 'utf8';
 
-CREATE DATABASE proyecto_chat CHARACTER SET = 'utf8';
+CREATE DATABASE IF NOT EXISTS proyecto_chat CHARACTER SET = 'utf8';
 USE proyecto_chat;
 FLUSH PRIVILEGES;
 

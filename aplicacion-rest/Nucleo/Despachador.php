@@ -53,8 +53,6 @@ class Despachador
 				}
 			break;
 		}
-
-		file_put_contents('data.txt', file_get_contents('php://input'));
 		
 		if ($this->_datosDeSolicitud === false
 		 or is_null($this->_datosDeSolicitud)) {

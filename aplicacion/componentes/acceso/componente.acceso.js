@@ -4,7 +4,7 @@
 	var importar = [
 	    global.aplicacion.nucleo.componente,
     	global.aplicacion.servicios.sesion,
-		new global.aplicacion.nucleo.http(),
+	  	new global.aplicacion.nucleo.http(),
 	];
 
 	global.aplicacion.componentes.acceso = ComponenteAcceso.apply(null, importar);

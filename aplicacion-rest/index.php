@@ -39,7 +39,6 @@
   use Nucleo\AdmExcepciones as AdmExcepciones;
   use Nucleo\Despachador as Despachador;
 
-  file_put_contents('test.txt',"entra");
   /*
    * Ejecuta la operación solicitada.
    *
