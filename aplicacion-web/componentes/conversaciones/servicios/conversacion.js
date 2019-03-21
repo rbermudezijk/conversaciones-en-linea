@@ -34,7 +34,7 @@
 			};
 			
 			(new _servHttp)
-			 .estUri('../aplicacion-rest/mensajes')
+			 .estUri(API_URL+'/mensajes')
 			 .estDatos(mensajePorEnviar)
 			 .estApiToken(_servSesion.usuarioPrincipal('apiToken'))
 			 .correcto(function(){contenido.value = '';})
@@ -48,7 +48,7 @@
 			
 			_servSesion.apilaLlamadaHttp(
 				(new _servHttp)
-				 .estUri ( '../aplicacion-rest/mensajes' )
+				 .estUri ( API_URL+'/mensajes' )
 				 .estDatos(banderas)
 				 .estApiToken(_servSesion.usuarioPrincipal('apiToken'))
 				 .correcto(accion)

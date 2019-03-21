@@ -90,7 +90,7 @@ function (_localStorage, _servHttp) {
          */
         this.cierraSesion = function () {
             _servHttp
-            .estUri('../aplicacion-rest/cierrasesion')
+            .estUri(API_URL+'/cierrasesion')
             .estApiToken(_localStorage.getItem('apiToken'))
             .post(); /** informa al servidor del cierre de sesion. */
             

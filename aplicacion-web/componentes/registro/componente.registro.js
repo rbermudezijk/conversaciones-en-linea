@@ -34,7 +34,7 @@
 
 		this.existeUsuario = function () {
 			(new _servHttp)
-			 .estUri('../aplicacion-rest/verificausuario')
+			 .estUri(API_URL+'/verificausuario')
 			 .estDatos({usuario: self.querySelector('#usuario').value})
 			 .correcto(iValidaUsuario)
 			 .fallo(function(rs){console.log(rs)})
@@ -56,7 +56,7 @@
 
 		this.aRegistrar = function () {
 			(new _servHttp())
-			 .estUri('../aplicacion-rest/registro')
+			 .estUri(API_URL+'/registro')
 			 .estDatos(modRegUsuario())
 			 .correcto(iRegValido)
 			 .fallo(iError)

@@ -41,7 +41,7 @@
 		valida la existencia del usuario.*/
 		function sInicioSesion (objCredenciales, fnCredValidas, fnError) {
 			_servHttp
-			 .estUri( '../aplicacion-rest/acceso' )
+			 .estUri( API_URL+'/acceso' )
 			 .estDatos( objCredenciales )
 			 .correcto( fnCredValidas )
 			 .fallo( fnError )

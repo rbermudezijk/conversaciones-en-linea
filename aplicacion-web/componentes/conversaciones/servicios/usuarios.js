@@ -31,7 +31,7 @@
 			
 			_servSesion.apilaLlamadaHttp(
 				_servHttp
-				 .estUri ( '../aplicacion-rest/usuarios' )
+				 .estUri ( API_URL+'/usuarios' )
 				 .estDatos(banderas)
 				 .estApiToken( _servSesion.usuarioPrincipal('apiToken') )
 				 .correcto(accion)

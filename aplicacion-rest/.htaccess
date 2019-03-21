@@ -1,3 +1,7 @@
+Header add Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Headers "api-token,content-type,*"
+HEader add Access-Control-Allow-Methods "PUT,POST,DELETE,GET,OPTIONS,*"
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
     

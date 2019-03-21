@@ -1,0 +1,27 @@
+version: '3.2'
+services:
+  base_de_datos:
+    build:
+      context: "./base-de-datos"
+    image: "mensajes-base-de-datos"
+    ports:
+      - "3306:3306"
+  api_rest:
+    build:
+      context: "./aplicacion-rest"
+    image: "mensajes-api-rest"
+    links:
+     - "base_de_datos:mensajes-base-de-datos"
+  contenido_web:
+    build:
+      context: "./aplicacion-web"
+    image: "mensajes-contenido-web"
+  proxy_cluster:
+    build: 
+      context: "./aplicacion-proxy"
+    image: "mensajes-proxy-cluster"
+    ports:
+      - "80:80"
+    links:
+      - "api_rest:mensajes-api-rest"
+      - "contenido_web:mensajes-contenido-web"

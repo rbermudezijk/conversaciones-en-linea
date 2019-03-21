@@ -1,4 +1,7 @@
 <?php
+  if ($_SERVER['REQUEST_METHOD']=='OPTIONS') {
+    exit(0);
+  }
   /*
    * Por protocolo REST, una aplicación diseñada bajo esta arquitectura no
    * DEBE utilizar variables de sesión que afecten la ejecución en parale-

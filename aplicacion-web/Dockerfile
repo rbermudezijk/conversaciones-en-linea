@@ -11,9 +11,9 @@ RUN sed -i -e 's/^#\(Include .*httpd-vhosts.conf\)/\1/' conf/httpd.conf
 
 #Se copia la aplicación dentro de la imagen
 WORKDIR /usr/local/apache2/htdocs/
-run mkdir aplicacion
-ADD ./ ./aplicacion/
-RUN rm ./aplicacion/*.conf
+run mkdir mensajes.comunidad.com
+ADD ./ ./mensajes.comunidad.com/
+RUN rm ./mensajes.comunidad.com/*.conf
 
 #Exposición del puerto 80
 EXPOSE 80
