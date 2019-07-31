@@ -1,4 +1,5 @@
-version: '3.2'
+version: '3.5'
+
 services:
   base_de_datos:
     build:
@@ -16,6 +17,8 @@ services:
     build:
       context: "./aplicacion-web"
     image: "mensajes-contenido-web"
+    links:
+      - "api_rest:mensajes-api-rest"
   proxy_cluster:
     build: 
       context: "./aplicacion-proxy"
