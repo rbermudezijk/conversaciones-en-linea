@@ -35,7 +35,7 @@ class Acceso
 		return 
 		  (new HrProteccion)
 		    ->generarLlave(
-		      (new BdUsuarios())
+		      (new BdUsuarios)
 		        ->validaCredenciales($solicitud['credenciales'])
 		        ->registraConexion()
 		    );

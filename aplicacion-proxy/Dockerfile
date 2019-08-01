@@ -5,16 +5,22 @@
 #
 FROM httpd
 
-WORKDIR /usr/local/apache2/
+WORKDIR /usr/local/apache2/conf/
 
-#Se abren los módulos de apache necesarios para la ejecución del proxy.
-RUN sed -i -e 's/^#\(LoadModule proxy_module.*\)/\1/' conf/httpd.conf
-RUN sed -i -e 's/^#\(LoadModule proxy_ajp_module.*\)/\1/' conf/httpd.conf
-RUN sed -i -e 's/^#\(LoadModule proxy_http_module.*\)/\1/' conf/httpd.conf
+# Se liberan módulos requeridos para el correcto funcionamiento del balanceador
+RUN sed -i -e 's/^#\(LoadModule\s.*proxy.*\)/\1/' httpd.conf
 
 #Se añade a la imagen la configuración del proxy.
-COPY ./proxy.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
-RUN sed -i -e 's/^#\(Include .*httpd-vhosts.conf\)/\1/' conf/httpd.conf
+COPY ./proxy.conf extra/httpd-vhosts.conf
+RUN sed -i -e 's/^#\(Include .*httpd-vhosts.conf\)/\1/' httpd.conf
+
+# Modulos necesarios no mencionados
+RUN sed -i -e 's/^#\(LoadModule slotmem_shm_module.*\)/\1/' httpd.conf
+RUN sed -i -e 's/^#\(LoadModule xml2enc_module.*\)/\1/' httpd.conf
+RUN sed -i -e 's/^#\(LoadModule watchdog_module.*\)/\1/' httpd.conf
+
+# Tipo de balanceador
+RUN sed -i -e 's/^#\(LoadModule lbmethod_byrequests_module.*\)/\1/' httpd.conf
 
 #Exposición del puerto 80
 EXPOSE 80

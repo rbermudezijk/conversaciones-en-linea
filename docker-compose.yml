@@ -7,18 +7,37 @@ services:
     image: "mensajes-base-de-datos"
     ports:
       - "3306:3306"
-  api_rest:
+
+  api_rest0:
     build:
       context: "./aplicacion-rest"
     image: "mensajes-api-rest"
     links:
      - "base_de_datos:mensajes-base-de-datos"
+  api_rest1:
+    build:
+      context: "./aplicacion-rest"
+    image: "mensajes-api-rest"
+    links:
+     - "base_de_datos:mensajes-base-de-datos"
+  api_rest2:
+    build:
+      context: "./aplicacion-rest"
+    image: "mensajes-api-rest"
+    links:
+     - "base_de_datos:mensajes-base-de-datos"
+  api_rest3:
+    build:
+      context: "./aplicacion-rest"
+    image: "mensajes-api-rest"
+    links:
+     - "base_de_datos:mensajes-base-de-datos"
+  
   contenido_web:
     build:
       context: "./aplicacion-web"
     image: "mensajes-contenido-web"
-    links:
-      - "api_rest:mensajes-api-rest"
+
   proxy_cluster:
     build: 
       context: "./aplicacion-proxy"
@@ -26,5 +45,8 @@ services:
     ports:
       - "80:80"
     links:
-      - "api_rest:mensajes-api-rest"
+      - "api_rest0:mensajes-api-rest0"
+      - "api_rest1:mensajes-api-rest1"
+      - "api_rest2:mensajes-api-rest2"
+      - "api_rest3:mensajes-api-rest3"
       - "contenido_web:mensajes-contenido-web"
