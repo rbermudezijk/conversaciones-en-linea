@@ -35,7 +35,7 @@ echo -e '
     Allow from all
     Require all granted
 </Directory>
-' > conf.d/api.conf
+' > /etc/httpd/conf.d/api.conf
 
 chmod -R 755 /var/www/html
 restorecon -R /var/www
@@ -44,4 +44,4 @@ restorecon -R /var/www
 sudo setsebool -P httpd_can_network_connect 1
 
 #Start HTTP - PHP server
-systemctl start httpd.service
+systemctl start httpd

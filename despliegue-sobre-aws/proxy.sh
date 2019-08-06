@@ -22,8 +22,8 @@ echo -e '
 
     <Proxy balancer://cluster1>
         BalancerMember http://10.0.1.30:80/
-        BalancerMember http://10.0.2.30:80/
-        BalancerMember http://10.0.3.30:80/
+#       BalancerMember http://10.0.2.30:80/
+#       BalancerMember http://10.0.3.30:80/
         ProxySet lbmethod=byrequests
     </Proxy>
 
@@ -31,3 +31,5 @@ echo -e '
     ProxyPass "/" balancer://cluster1/
     ProxyPassReverse "/" balancer://cluster1/
 </VirtualHost>' > conf.d/httpd-vhosts.conf
+
+systemctl start httpd
