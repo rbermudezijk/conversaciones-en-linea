@@ -90,8 +90,7 @@
 			var tIcono = document.createElement('div');
 			tIcono.classList.add('t-icono');
 			
-			tIcono.innerHTML = _conversacionActual.nombre
-		                     + ' - ' + (_conversacionActual.ip || '');
+			tIcono.innerHTML = _conversacionActual.nombre;
 			titulo.appendChild(tIcono);
 		}
 		

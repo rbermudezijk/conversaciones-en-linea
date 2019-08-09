@@ -13,6 +13,7 @@ body, h3{
 	background:  #4DC5BC;
 }
 .titulo{
+	min-height:    35px;
 	font-size:     23px;
 	padding:       10px 10px 15px;
 }

@@ -41,7 +41,7 @@
 }
 #escribe-mensaje {
 	float: left;
-	width:  calc(99% - 105px);
+	width:  calc(99% - 120px);
 	height: 85px;
 	padding-left: 15px;
 	padding-top:  10px;
@@ -127,22 +127,22 @@
 	background-image: url("recursos/email.png");
 }
 
-@media screen and (max-width: 480px) {
-	.panel-der{
+@media screen and (max-width: 600px) {
+	.panel-der {
 		z-index: 3;
 		left: 0;
 		width: 100%;
 	}
-	#btn-enviar{
-		margin-top: -5px;
-		height: 55px;
+	#btn-enviar {
+		margin-top: 7px;
+		height: 58px;
 		width:  55px;
 	}
 	#escribe-mensaje {
-		height: 45px;
-		width: calc(99% - 70px);
+		height: 65px;
+		width: calc(99% - 90px);
 	}
-	.contenedor-conversacion{
-		height: calc(100% - 145px);
+	.contenedor-conversacion {
+		height: calc(100% - 185px);
 	}
 }

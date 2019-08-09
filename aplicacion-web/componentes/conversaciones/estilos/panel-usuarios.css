@@ -59,7 +59,7 @@ sup.notificacion{
 	cursor: default;
 	font-weight: normal;
 }
-@media screen and (max-width: 480px)
+@media screen and (max-width: 600px)
 {
 	.panel-izq {
 		width:   100%;

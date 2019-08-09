@@ -70,12 +70,10 @@
 			document.querySelector('body').style.backgroundColor = "white";
 
             self.querySelector('#usuario-principal')
-			.innerHTML = _servSesion.usuarioPrincipal('nombre')
-			           + ' - ' + _servSesion.usuarioPrincipal('ip');
+			.innerHTML = _servSesion.usuarioPrincipal('nombre');
 			
 			self.querySelector('#usuario-principal-m')
-			.innerHTML = _servSesion.usuarioPrincipal('nombre')
-			           + ' - ' + _servSesion.usuarioPrincipal('ip');
+			.innerHTML = _servSesion.usuarioPrincipal('nombre');
 		}
 		
 		this.aMostrarBarra = function () {
